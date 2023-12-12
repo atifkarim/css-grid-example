@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/css_grid_style.css">
     <style>
-        .container{
+        .container {
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(5, 90px);
-            grid-template-rows: repeat(2, 90px);
-            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 3px;
+            grid-auto-flow: dense;
             grid-gap: 2px;
         }
 
-        .six{
-            justify-self: center;
+        .container img {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
         }
 
+        .horizontal {
+            grid-column: span 2;
+        }
+
+        .vertical {
+            grid-row: span 2;
+        }
+
+        .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
     </style>
 </head>
 
 <body>
- <div class="container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div class = "six">6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
- </div>
+    <div class="container">
+        <div class="horizontal"><img src="image/hor_1.jpg" alt=""></div>
+        <div class="vertical"><img src="image/ver_1.jpg" alt=""></div>
+        <div class="big"><img src="image/big_1.JPG" alt=""></div>
+        <div class="horizontal"><img src="image/hor_2.jpg" alt=""></div>
+        <div class="vertical"><img src="image/ver_2.JPG" alt=""></div>
+        <div class="big" class="six"><img src="image/big_2.JPG" alt=""></div>
+        <div class="horizontal"><img src="image/hor_3.JPG" alt=""></div>
+        <div class="vertical"><img src="image/ver_3.JPG" alt=""></div>
+        <div class="vertical"><img src="image/ver_4.JPG" alt=""></div>
+        <div class="horizontal"><img src="image/hor_4.JPG" alt=""></div>
+        <div class="big"><img src="image/big_3.jpg" alt=""></div>
+    </div>
 </body>
+
 </html>
