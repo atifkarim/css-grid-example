@@ -8,23 +8,23 @@
     <style>
         .container{
             display: grid;
-            grid-template: repeat(3,1fr) / repeat(3,1fr);
-            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2px;
+        }
+
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
     </style>
-
-
 </head>
-
 
 <body>
  <div class="container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
+    <div class="header">Header</div>
+    <div class="manu">Menu</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
  </div>
 </body>
 </html>
